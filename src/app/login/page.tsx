@@ -14,7 +14,7 @@ export default function Login() {
   const router = useRouter();
 
   if (user) {
-    router.push("/list");
+    router.push("/");
   }
 
   const signIn = async () => {
