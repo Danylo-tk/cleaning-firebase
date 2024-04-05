@@ -14,7 +14,7 @@ export default function Login() {
   const router = useRouter();
 
   if (user) {
-    router.push("/");
+    // router.push("/");
   }
 
   const signIn = async () => {
@@ -51,7 +51,12 @@ export default function Login() {
                 </p>
                 <button onClick={signIn}>
                   <div className="flex w-full items-center justify-center gap-2">
-                    <Image src="" height={30} width={30} alt="Google logo" />{" "}
+                    <Image
+                      src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png"
+                      height={30}
+                      width={30}
+                      alt="Google logo"
+                    />{" "}
                     Continue with Google
                   </div>
                 </button>
