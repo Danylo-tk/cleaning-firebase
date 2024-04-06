@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/Button";
 import { initFirebase } from "@/firebase/firebase";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import Image from "next/image";
@@ -37,11 +38,11 @@ export default function Login() {
           ) : (
             <>
               <div>
-                <h2 className="text-xl font-bold">📚 BOOKS LIBRARY</h2>
+                <h2 className="text-xl font-bold">🧹 CLEANING APP</h2>
                 <div>
-                  <p>* Add new books to the library</p>
-                  <p>* Update/delete book information</p>
-                  <p>* Set activity of a book</p>
+                  <p>* Log in to the app</p>
+                  <p>* Create new orders</p>
+                  <p>* Track activity of orders</p>
                 </div>
               </div>
 
@@ -49,7 +50,7 @@ export default function Login() {
                 <p className="text-2xl font-medium text-gray-600">
                   /login to continue
                 </p>
-                <button onClick={signIn}>
+                <Button onClick={signIn}>
                   <div className="flex w-full items-center justify-center gap-2">
                     <Image
                       src="https://cdn4.iconfinder.com/data/icons/logos-brands-7/512/google_logo-google_icongoogle-512.png"
@@ -59,7 +60,7 @@ export default function Login() {
                     />{" "}
                     Continue with Google
                   </div>
-                </button>
+                </Button>
               </div>
             </>
           )}
