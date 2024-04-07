@@ -1,3 +1,5 @@
+import Icon from "../Icon";
+
 type MenuItemType = {
   name: string;
   icon?: JSX.Element;
@@ -37,39 +39,45 @@ const MainListItems = () => {
     {
       name: "Feed",
       path: "",
+      icon: <Icon name="home" />,
     },
     {
       name: "My Profile",
       path: "",
+      icon: <Icon name="account" />,
       disabled: true,
     },
     {
       name: "Messages",
       path: "",
+      icon: <Icon name="messages" />,
       disabled: true,
     },
     {
       name: "Quotes",
       path: "",
+      icon: <Icon name="bolt" />,
       disabled: true,
     },
     {
       name: "Following",
       path: "",
+      icon: <Icon name="following" />,
       disabled: true,
     },
     {
       name: "Saved",
       path: "",
+      icon: <Icon name="saved" />,
       disabled: true,
     },
     {
       name: "Settings",
       path: "",
+      icon: <Icon name="settings" />,
       disabled: true,
     },
   ];
-
   return (
     <div>
       {menu.map((item: MenuItemType, index) => (
