@@ -1,6 +1,7 @@
 "use client";
 
 import { Button } from "@/components/Button";
+import { Loader } from "@/components/Loader/Loader";
 import { initFirebase } from "@/firebase/firebase";
 import { GoogleAuthProvider, getAuth, signInWithPopup } from "firebase/auth";
 import Image from "next/image";
@@ -33,7 +34,7 @@ export default function Login() {
         <div className="absolute z-10 flex h-56 w-72 flex-col justify-between border border-solid border-gray-400 bg-white p-2">
           {loading ? (
             <div className="flex h-full items-center justify-center">
-              {/* <Loader size={48} /> */}
+              <Loader size={48} />
             </div>
           ) : (
             <>

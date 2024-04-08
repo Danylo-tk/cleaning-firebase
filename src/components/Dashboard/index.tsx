@@ -8,6 +8,7 @@ import { useAuthState } from "react-firebase-hooks/auth";
 import Image from "next/image";
 import { useState } from "react";
 import { useRouter } from "next/navigation";
+import { Loader } from "../Loader/Loader";
 
 type DashboardProps = {
   children: React.ReactNode;
@@ -58,7 +59,9 @@ const UserMenu = () => {
           </div>
 
           {userLoading ? (
-            <div>Loading</div>
+            <div className="flex items-center">
+              <Loader />
+            </div>
           ) : (
             <div className="flex flex-col">
               <span>{user?.displayName}</span>
