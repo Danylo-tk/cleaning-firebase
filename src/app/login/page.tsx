@@ -15,7 +15,7 @@ export default function Login() {
   const router = useRouter();
 
   if (user) {
-    // router.push("/");
+    router.push("/dashboard");
   }
 
   const signIn = async () => {
