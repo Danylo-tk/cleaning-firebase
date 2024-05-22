@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Icon from "../Icon";
 
 type MenuItemType = {
@@ -25,27 +26,26 @@ const MenuItem = ({ item }: MenuItemProps) => {
   }
 
   return (
-    <div className="group flex">
+    <Link href={item.path} className="group flex cursor-pointer">
       <div className="flex h-14 items-center gap-3 px-4 py-3 transition-all duration-200 group-hover:rounded-full group-hover:bg-slate-200">
         <span className="text-2xl">{item?.icon}</span>
         <span className="text-xl">{item.name}</span>
       </div>
-    </div>
+    </Link>
   );
 };
 
 const MainListItems = () => {
   const menu: MenuItemType[] = [
     {
-      name: "Feed",
-      path: "",
+      name: "Dashboard",
+      path: "dashboard",
       icon: <Icon name="home" />,
     },
     {
-      name: "My Profile",
+      name: "Orders",
       path: "",
-      icon: <Icon name="account" />,
-      disabled: true,
+      icon: <Icon name="bolt" />,
     },
     {
       name: "Messages",
@@ -54,22 +54,9 @@ const MainListItems = () => {
       disabled: true,
     },
     {
-      name: "Quotes",
-      path: "",
-      icon: <Icon name="bolt" />,
-      disabled: true,
-    },
-    {
-      name: "Following",
-      path: "",
-      icon: <Icon name="following" />,
-      disabled: true,
-    },
-    {
-      name: "Saved",
-      path: "",
-      icon: <Icon name="saved" />,
-      disabled: true,
+      name: "My Profile",
+      path: "profile",
+      icon: <Icon name="account" />,
     },
     {
       name: "Settings",

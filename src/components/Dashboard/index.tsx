@@ -50,7 +50,7 @@ const UserMenu = () => {
         <div className="flex gap-2">
           <div className="h-12 w-12 rounded-full bg-gray-200">
             <Image
-              src={user?.photoURL || ""}
+              src={user?.photoURL ?? ""}
               width={48}
               height={48}
               className="rounded-full"
